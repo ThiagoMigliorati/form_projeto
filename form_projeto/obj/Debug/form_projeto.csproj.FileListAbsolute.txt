@@ -1,0 +1,14 @@
+C:\Users\Thiago\Documents\Visual Studio 2015\Projects\projeto_casa_irma\form_projeto\form_projeto\bin\Debug\form_projeto.exe.config
+C:\Users\Thiago\Documents\Visual Studio 2015\Projects\projeto_casa_irma\form_projeto\form_projeto\bin\Debug\form_projeto.exe
+C:\Users\Thiago\Documents\Visual Studio 2015\Projects\projeto_casa_irma\form_projeto\form_projeto\bin\Debug\form_projeto.pdb
+C:\Users\Thiago\Documents\Visual Studio 2015\Projects\projeto_casa_irma\form_projeto\form_projeto\bin\Debug\MetroFramework.Design.dll
+C:\Users\Thiago\Documents\Visual Studio 2015\Projects\projeto_casa_irma\form_projeto\form_projeto\bin\Debug\MetroFramework.dll
+C:\Users\Thiago\Documents\Visual Studio 2015\Projects\projeto_casa_irma\form_projeto\form_projeto\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Thiago\Documents\Visual Studio 2015\Projects\projeto_casa_irma\form_projeto\form_projeto\obj\Debug\form_projeto.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Documents\Visual Studio 2015\Projects\projeto_casa_irma\form_projeto\form_projeto\obj\Debug\form_projeto.Properties.Resources.resources
+C:\Users\Thiago\Documents\Visual Studio 2015\Projects\projeto_casa_irma\form_projeto\form_projeto\obj\Debug\form_projeto.csproj.GenerateResource.Cache
+C:\Users\Thiago\Documents\Visual Studio 2015\Projects\projeto_casa_irma\form_projeto\form_projeto\obj\Debug\form_projeto.exe
+C:\Users\Thiago\Documents\Visual Studio 2015\Projects\projeto_casa_irma\form_projeto\form_projeto\obj\Debug\form_projeto.pdb
+C:\Users\Thiago\Documents\Visual Studio 2015\Projects\projeto_casa_irma\form_projeto\form_projeto\obj\Debug\form_projeto.Form1.resources
+C:\Users\Thiago\Documents\Visual Studio 2015\Projects\projeto_casa_irma\form_projeto\form_projeto\bin\Debug\MySql.Data.dll
+C:\Users\Thiago\Documents\Visual Studio 2015\Projects\projeto_casa_irma\form_projeto\form_projeto\bin\Debug\MySql.Data.xml
