@@ -14,16 +14,30 @@ namespace form_projeto
 {
     public partial class Form1 : MetroForm
     {
+
+        private List<classe_idoso> idosoList;
+        private classe_relatorio objRelatorio;
+
         public Form1()
         {
             InitializeComponent();
             metroLabel1.Text = DateTime.Now.ToShortDateString();
+            // instanciando o objeto para relatorios que irá conectar com o bd
+            objRelatorio = new classe_relatorio();
+
+            idosoList = objRelatorio.idosoComboboxReturn();
+
+            foreach (classe_idoso idoso in idosoList)
+            {
+                metroComboBox1.Items.Add(idoso.nome_idoso);
+            }  // end foreach
+
         }
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            // instanciando o objeto para relatorios que irá conectar com o bd
-            classe_relatorio objRelatorio = new classe_relatorio();
+            
+            
 
             // ajuste para os campos relacionados a aba geral com refeições
 
@@ -116,67 +130,67 @@ namespace form_projeto
             // tratamento do campo Liquido
             if (radio_liquido_1.Checked)
             {
-                objRelatorio.liquido_relatorio = "Tudo";
+                objRelatorio.liquido_relatorio = "1 a 3";
             }
             else if (radio_liquido_2.Checked)
             {
-                objRelatorio.liquido_relatorio = "Metade";
+                objRelatorio.liquido_relatorio = "4 a 6";
             }
             else if (radio_liquido_3.Checked)
             {
-                objRelatorio.liquido_relatorio = "Nada";
+                objRelatorio.liquido_relatorio = "7 a 10";
             }
 
             // tratamento do campo Urina
             if (radio_urina_1.Checked)
             {
-                objRelatorio.urina_relatorio = "Tudo";
+                objRelatorio.urina_relatorio = "1 a 3";
             }
             else if (radio_urina_2.Checked)
             {
-                objRelatorio.urina_relatorio = "Metade";
+                objRelatorio.urina_relatorio = "4 a 6";
             }
             else if (radio_urina_3.Checked)
             {
-                objRelatorio.urina_relatorio = "Nada";
+                objRelatorio.urina_relatorio = "7 a 10";
             }
 
             // tratamento do campo Evacuacao
             if (radio_evacuacao_1.Checked)
             {
-                objRelatorio.evacuacao_relatorio = "Tudo";
+                objRelatorio.evacuacao_relatorio = "1x";
             }
             else if (radio_evacuacao_2.Checked)
             {
-                objRelatorio.evacuacao_relatorio = "Metade";
+                objRelatorio.evacuacao_relatorio = "2x";
             }
             else if (radio_evacuacao_3.Checked)
             {
-                objRelatorio.evacuacao_relatorio = "Nada";
+                objRelatorio.evacuacao_relatorio = "3x";
             }
 
             // tratamento do campo Banho
             if (radio_banho_1.Checked)
             {
-                objRelatorio.banho_relatorio = "Tudo";
+                objRelatorio.banho_relatorio = "1x";
             }
             else if (radio_banho_2.Checked)
             {
-                objRelatorio.banho_relatorio = "Metade";
+                objRelatorio.banho_relatorio = "2x";
             }
             else if (radio_banho_3.Checked)
             {
-                objRelatorio.banho_relatorio = "Nada";
+                objRelatorio.banho_relatorio = "3x";
             }
 
             // tratamento do campo Sono
             if (radio_sono_1.Checked)
             {
-                objRelatorio.sono_relatorio = "Tudo";
+                objRelatorio.sono_relatorio = "Noite toda";
             }
             else if (radio_sono_2.Checked)
             {
-                objRelatorio.sono_relatorio = "Metade";
+                objRelatorio.sono_relatorio = "Parcial";
             }
             else if (radio_sono_3.Checked)
             {

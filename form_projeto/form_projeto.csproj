@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classe_idoso.cs" />
     <Compile Include="classe_relatorio.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

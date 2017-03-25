@@ -82,8 +82,8 @@ namespace form_projeto
             string strValues = "cafe_relatorio, colacao_relatorio, almoco_relatorio, lanche_relatorio, jantar_relatorio, ceia_relatorio, liquido_relatorio, urina_relatorio, evacuacao_relatorio, banho_relatorio, sono_relatorio, intensidade_dor_relatorio, obs_relatorio, q1_relatorio, q2_relatorio, q3_relatorio, q4_relatorio, q5_relatorio, q6_relatorio, q7_relatorio, q8_relatorio, q9_relatorio, q10_relatorio, q11_relatorio, fk_cuidador, fk_idoso";
             string strInsert = "insert into tb_relatorio (" + strValues + ") values (" + strColunas + ")";
 
-            
-            
+            conexao.Open();
+
             if (conexaoDb())
             {
                 //Conexão realizada com sucesso
@@ -139,6 +139,42 @@ namespace form_projeto
             }
             
         }// end method gravaRelatorio
+
+        public List<classe_idoso> idosoComboboxReturn()
+        {
+
+            if (conexaoDb())
+            {
+
+                List<classe_idoso> idosoList = new List<classe_idoso>();
+                var command = conexao.CreateCommand();
+
+                //conexao.Open();
+
+                command.CommandText = "Select * from tb_idoso";
+                command.ExecuteNonQuery();
+                MySqlDataReader dtreader = command.ExecuteReader();
+
+                while (dtreader.Read())//Enquanto existir dados no select
+                {
+                    classe_idoso objIdoso = new classe_idoso();
+                    objIdoso.nome_idoso = dtreader["nome_idoso"].ToString();
+                    objIdoso.id_idoso = Convert.ToInt32(dtreader["id_idoso"]);
+                    idosoList.Add(objIdoso);
+                    
+                }// end while
+
+                conexao.Close();
+                return idosoList;
+            }
+            else
+            {
+                return null;
+            }
+
+            return null;
+
+        }// end metodo
 
     }// end class
 }
