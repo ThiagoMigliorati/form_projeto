@@ -184,7 +184,7 @@ namespace form_projeto
             }
 
             // Inserindo o campo de intensidade da dor
-            objRelatorio.dor_intensidade_relatorio = metroLabel5.Text;
+            objRelatorio.dor_intensidade_relatorio = Convert.ToInt32(metroLabel5.Text);
             // Insere o campo de observações na var do objRelatorio
             objRelatorio.obs_relatorio = observacoes.Text;
 
@@ -192,104 +192,117 @@ namespace form_projeto
 
             if (q1_1.Checked)
             {
-                objRelatorio.q1_relatorio = "Sim";
+                objRelatorio.q1_relatorio = 1;
             }
             else
             {
-                objRelatorio.q1_relatorio = "Não";
+                objRelatorio.q1_relatorio = 0;
             }
 
             if (q2_1.Checked)
             {
-                objRelatorio.q2_relatorio = "Sim";
+                objRelatorio.q2_relatorio = 1;
             }
             else
             {
-                objRelatorio.q2_relatorio = "Não";
+                objRelatorio.q2_relatorio = 0;
             }
 
             if (q3_1.Checked)
             {
-                objRelatorio.q3_relatorio = "Sim";
+                objRelatorio.q3_relatorio = 1;
             }
             else
             {
-                objRelatorio.q3_relatorio = "Não";
+                objRelatorio.q3_relatorio = 0;
             }
 
             if (q4_1.Checked)
             {
-                objRelatorio.q4_relatorio = "Sim";
+                objRelatorio.q4_relatorio = 1;
             }
             else
             {
-                objRelatorio.q4_relatorio = "Não";
+                objRelatorio.q4_relatorio = 0;
             }
 
             if (q5_1.Checked)
             {
-                objRelatorio.q5_relatorio = "Sim";
+                objRelatorio.q5_relatorio = 1;
             }
             else
             {
-                objRelatorio.q5_relatorio = "Não";
+                objRelatorio.q5_relatorio = 0;
             }
 
             if (q6_1.Checked)
             {
-                objRelatorio.q6_relatorio = "Sim";
+                objRelatorio.q6_relatorio = 1;
             }
             else
             {
-                objRelatorio.q6_relatorio = "Não";
+                objRelatorio.q6_relatorio = 0;
             }
 
             if (q7_1.Checked)
             {
-                objRelatorio.q7_relatorio = "Sim";
+                objRelatorio.q7_relatorio = 1;
             }
             else
             {
-                objRelatorio.q7_relatorio = "Não";
+                objRelatorio.q7_relatorio = 0;
             }
 
             if (q8_1.Checked)
             {
-                objRelatorio.q8_relatorio = "Sim";
+                objRelatorio.q8_relatorio = 1;
             }
             else
             {
-                objRelatorio.q8_relatorio = "Não";
+                objRelatorio.q8_relatorio = 0;
             }
 
             if (q9_1.Checked)
             {
-                objRelatorio.q9_relatorio = "Sim";
+                objRelatorio.q9_relatorio = 1;
             }
             else
             {
-                objRelatorio.q9_relatorio = "Não";
+                objRelatorio.q9_relatorio = 0;
             }
 
             if (q10_1.Checked)
             {
-                objRelatorio.q10_relatorio = "Sim";
+                objRelatorio.q10_relatorio = 1;
             }
             else
             {
-                objRelatorio.q10_relatorio = "Não";
+                objRelatorio.q10_relatorio = 0;
             }
 
             if (q11_1.Checked)
             {
-                objRelatorio.q11_relatorio = "Sim";
+                objRelatorio.q11_relatorio = 1;
             }
             else
             {
-                objRelatorio.q11_relatorio = "Não";
+                objRelatorio.q11_relatorio = 0;
             }
 
-            metroLabel3.Text = objRelatorio.gravaRelatorio().ToString();
+            // Conectando e Inserndo dados do form no Banco de Dados 
+            switch (objRelatorio.gravaRelatorio())
+            {
+                case 0:
+                    MetroMessageBox.Show(this, "Operação realizada com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                case 1:
+                    MetroMessageBox.Show(this, "Problemas com a conexão ao Bando de Dados.", "Problemas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
+                case 2:
+                    MetroMessageBox.Show(this, "Problemas com a inclusão no Bando de Dados.  \n" + objRelatorio.problemas, "Problemas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+
+            }
 
         }
 
